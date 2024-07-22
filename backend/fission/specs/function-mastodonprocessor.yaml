@@ -1,0 +1,52 @@
+include:
+- ./functions/mastodonprocessor.py
+kind: ArchiveUploadSpec
+name: functions-mastodonprocessor-py-TaEa
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: mastodonprocessor-48d47062-8600-456b-aae5-71529c066799
+spec:
+  deployment:
+    checksum: {}
+    type: url
+    url: archive://functions-mastodonprocessor-py-TaEa
+  environment:
+    name: python3
+    namespace: ""
+  source:
+    checksum: {}
+status:
+  buildstatus: none
+  lastUpdateTimestamp: "2024-05-21T20:44:24Z"
+
+---
+apiVersion: fission.io/v1
+kind: Function
+metadata:
+  creationTimestamp: null
+  name: mastodonprocessor
+spec:
+  InvokeStrategy:
+    ExecutionStrategy:
+      ExecutorType: poolmgr
+      MaxScale: 0
+      MinScale: 0
+      SpecializationTimeout: 120
+      TargetCPUPercent: 0
+    StrategyType: execution
+  concurrency: 500
+  environment:
+    name: python3
+    namespace: ""
+  functionTimeout: 60
+  idletimeout: 120
+  package:
+    packageref:
+      name: mastodonprocessor-48d47062-8600-456b-aae5-71529c066799
+      namespace: ""
+  requestsPerPod: 1
+  resources: {}

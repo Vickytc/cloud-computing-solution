@@ -1,0 +1,55 @@
+include:
+- ./functions/wordcloud.py
+kind: ArchiveUploadSpec
+name: functions-wordcloud-py-c9f5
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: wordcloud-04cf52d5-2f85-4899-91a6-0cd4b7a247ac
+spec:
+  deployment:
+    checksum: {}
+    type: url
+    url: archive://functions-wordcloud-py-c9f5
+  environment:
+    name: python3
+    namespace: ""
+  source:
+    checksum: {}
+status:
+  buildstatus: none
+  lastUpdateTimestamp: "2024-05-21T20:45:25Z"
+
+---
+apiVersion: fission.io/v1
+kind: Function
+metadata:
+  creationTimestamp: null
+  name: wordcloud
+spec:
+  InvokeStrategy:
+    ExecutionStrategy:
+      ExecutorType: poolmgr
+      MaxScale: 0
+      MinScale: 0
+      SpecializationTimeout: 120
+      TargetCPUPercent: 0
+    StrategyType: execution
+  concurrency: 500
+  configmaps:
+  - name: configmap-es
+    namespace: ""
+  environment:
+    name: python3
+    namespace: ""
+  functionTimeout: 300
+  idletimeout: 120
+  package:
+    packageref:
+      name: wordcloud-04cf52d5-2f85-4899-91a6-0cd4b7a247ac
+      namespace: ""
+  requestsPerPod: 1
+  resources: {}

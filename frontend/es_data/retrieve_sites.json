@@ -1,0 +1,62 @@
+[
+    {
+        "year": 2020,
+        "compony": "Optus",
+        "number": 426
+    },
+    {
+        "year": 2023,
+        "compony": "Optus",
+        "number": 2905
+    },
+    {
+        "year": 2021,
+        "compony": "Optus",
+        "number": 1010
+    },
+    {
+        "year": 2023,
+        "compony": "Telstra",
+        "number": 4559
+    },
+    {
+        "year": 2022,
+        "compony": "Optus",
+        "number": 1932
+    },
+    {
+        "year": 2022,
+        "compony": "Telstra",
+        "number": 4071
+    },
+    {
+        "year": 2021,
+        "compony": "Telstra",
+        "number": 2695
+    },
+    {
+        "year": 2020,
+        "compony": "Telstra",
+        "number": 797
+    },
+    {
+        "year": 2022,
+        "compony": "TPG",
+        "number": 1029
+    },
+    {
+        "year": 2020,
+        "compony": "TPG",
+        "number": 0
+    },
+    {
+        "year": 2021,
+        "compony": "TPG",
+        "number": 163
+    },
+    {
+        "year": 2023,
+        "compony": "TPG",
+        "number": 2063
+    }
+]

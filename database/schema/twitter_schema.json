@@ -1,0 +1,127 @@
+{
+    "settings": {
+        "index": {
+            "number_of_shards": 3,
+            "number_of_replicas": 1
+        }
+    },
+    "mappings": {
+        "dynamic": "strict",
+        "properties": {
+            "created_at": {
+                "type": "date",
+                "format": "strict_date_optional_time"
+            },
+            "content": {
+                "type": "text"
+            },
+            "location": {
+                "type": "object",
+                "properties": {
+                    "coordinates": {
+                        "type": "geo_point"
+                    },
+                    "bbox": {
+                        "type": "geo_shape"
+                    }
+                }
+            },
+            "sentiment": {
+                "type": "object",
+                "properties": {
+                    "neg": {
+                        "type": "float"
+                    },
+                    "neu": {
+                        "type": "float"
+                    },
+                    "pos": {
+                        "type": "float"
+                    },
+                    "compound": {
+                        "type": "float"
+                    }
+                }
+            },
+            "readability_grades": {
+                "type": "object",
+                "properties": {
+                    "Kincaid": {
+                        "type": "float"
+                    },
+                    "ARI": {
+                        "type": "float"
+                    },
+                    "Coleman-Liau": {
+                        "type": "float"
+                    },
+                    "FleschReadingEase": {
+                        "type": "float"
+                    },
+                    "GunningFogIndex": {
+                        "type": "float"
+                    },
+                    "LIX": {
+                        "type": "float"
+                    },
+                    "SMOGIndex": {
+                        "type": "float"
+                    },
+                    "RIX": {
+                        "type": "float"
+                    },
+                    "DaleChallIndex": {
+                        "type": "float"
+                    }
+                }
+            },
+            "sentence_info": {
+                "type": "object",
+                "properties": {
+                    "characters_per_word": {
+                        "type": "float"
+                    },
+                    "syll_per_word": {
+                        "type": "float"
+                    },
+                    "words_per_sentence": {
+                        "type": "float"
+                    },
+                    "sentences_per_paragraph": {
+                        "type": "float"
+                    },
+                    "type_token_ratio": {
+                        "type": "float"
+                    },
+                    "characters": {
+                        "type": "integer"
+                    },
+                    "syllables": {
+                        "type": "integer"
+                    },
+                    "words": {
+                        "type": "integer"
+                    },
+                    "wordtypes": {
+                        "type": "integer"
+                    },
+                    "sentences": {
+                        "type": "integer"
+                    },
+                    "paragraphs": {
+                        "type": "integer"
+                    },
+                    "long_words": {
+                        "type": "integer"
+                    },
+                    "complex_words": {
+                        "type": "integer"
+                    },
+                    "complex_words_dc": {
+                        "type": "integer"
+                    }
+                }
+            }
+        }
+    }
+}

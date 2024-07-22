@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: default
+  name: configmap-mastodon
+data:
+  MTD_SERVER_1: aus.social
+  MTD_TOKEN_1: QLFqT36ITEEt0fcJ6CLdUNSvwLZcF5nlAiSpYd-LEJg
+  MTD_SERVER_2: mastodon.au
+  MTD_TOKEN_2: HdCkQSPgFW9Q37RJTekMR5q7-dWc6IHf4VyuWr505uc

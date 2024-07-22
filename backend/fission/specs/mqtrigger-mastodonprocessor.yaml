@@ -1,0 +1,24 @@
+apiVersion: fission.io/v1
+kind: MessageQueueTrigger
+metadata:
+  creationTimestamp: null
+  name: mastodonprocessor
+spec:
+  contentType: application/json
+  cooldownPeriod: 30
+  errorTopic: topic-errors
+  functionref:
+    functionweights: null
+    name: mastodonprocessor
+    type: name
+  maxReplicaCount: 100
+  maxRetries: 3
+  messageQueueType: kafka
+  metadata:
+    bootstrapServers: mycluster-kafka-bootstrap.kafka.svc:9092
+    consumerGroup: my-group
+  minReplicaCount: 0
+  mqtkind: keda
+  pollingInterval: 5
+  respTopic: topic-observations
+  topic: topic-mastodon

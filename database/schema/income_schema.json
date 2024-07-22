@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "index": {
+            "number_of_shards": 3,
+            "number_of_replicas": 1
+        }
+    },
+    "mappings": {
+        "properties" : {
+            "med_tot_psnl_incom_weekly" : {
+              "type" : "double"
+            },
+            "sa4_code_2021" : {
+              "type" : "keyword"
+            }   
+        }
+    }
+}

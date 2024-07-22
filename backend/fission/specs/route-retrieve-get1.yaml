@@ -1,0 +1,22 @@
+apiVersion: fission.io/v1
+kind: HTTPTrigger
+metadata:
+  creationTimestamp: null
+  name: retrieve-get1
+spec:
+  createingress: true
+  functionref:
+    functionweights: null
+    name: retrieve
+    type: name
+  host: ""
+  ingressconfig:
+    annotations: null
+    host: '*'
+    path: /retrieve/{server:[a-zA-Z0-9_]+}
+    tls: ""
+  method: ""
+  methods:
+  - GET
+  prefix: ""
+  relativeurl: /retrieve/{server:[a-zA-Z0-9_]+}

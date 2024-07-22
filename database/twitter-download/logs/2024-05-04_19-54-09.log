@@ -1,0 +1,26 @@
+2024-05-04 19:54:09,575 - INFO - the worker=5 has read twitter-100gb.json (file_size=120499126422) successfully!
+2024-05-04 19:54:09,575 - INFO - the worker=4 has read twitter-100gb.json (file_size=120499126422) successfully!
+2024-05-04 19:54:09,575 - INFO - the worker=1 has read twitter-100gb.json (file_size=120499126422) successfully!
+2024-05-04 19:54:09,575 - INFO - the worker=6 has read twitter-100gb.json (file_size=120499126422) successfully!
+2024-05-04 19:54:09,575 - INFO - the worker=7 has read twitter-100gb.json (file_size=120499126422) successfully!
+2024-05-04 19:54:09,575 - INFO - the worker=2 has read twitter-100gb.json (file_size=120499126422) successfully!
+2024-05-04 19:54:09,575 - INFO - the worker=0 has read twitter-100gb.json (file_size=120499126422) successfully!
+2024-05-04 19:54:09,575 - INFO - the search range for worker=5 is (75311954010, 90374344812)
+2024-05-04 19:54:09,575 - INFO - the search range for worker=4 is (60249563208, 75311954010)
+2024-05-04 19:54:09,575 - INFO - the search range for worker=1 is (15062390802, 30124781604)
+2024-05-04 19:54:09,575 - INFO - the search range for worker=6 is (90374344812, 105436735614)
+2024-05-04 19:54:09,575 - INFO - the search range for worker=7 is (105436735614, 120499126422)
+2024-05-04 19:54:09,575 - INFO - the search range for worker=2 is (30124781604, 45187172406)
+2024-05-04 19:54:09,575 - INFO - the search range for worker=0 is (0, 15062390802)
+2024-05-04 19:54:09,578 - INFO - the worker=3 has read twitter-100gb.json (file_size=120499126422) successfully!
+2024-05-04 19:54:09,578 - INFO - the search range for worker=3 is (45187172406, 60249563208)
+2024-05-04 19:55:16,138 - INFO - the subtask for worker=0 has finished!
+2024-05-04 19:55:18,273 - INFO - the subtask for worker=1 has finished!
+2024-05-04 19:55:18,728 - INFO - the subtask for worker=3 has finished!
+2024-05-04 19:55:18,893 - INFO - the subtask for worker=4 has finished!
+2024-05-04 19:55:18,902 - INFO - the subtask for worker=7 has finished!
+2024-05-04 19:55:18,990 - INFO - the subtask for worker=5 has finished!
+2024-05-04 19:55:19,623 - INFO - the subtask for worker=2 has finished!
+2024-05-04 19:55:19,852 - INFO - the subtask for worker=6 has finished!
+2024-05-04 19:55:28,309 - INFO - results gathered to master!
+2024-05-04 19:57:58,065 - INFO - results have been saved successfully!

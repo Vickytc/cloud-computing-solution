@@ -1,0 +1,52 @@
+include:
+- ./functions/mastodons/mastodons.py
+kind: ArchiveUploadSpec
+name: functions-mastodons-mastodons-py-S5W2
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: tstmtds1-3a46eb77-dd88-430b-9529-1a0e23f3e287
+spec:
+  deployment:
+    checksum: {}
+    type: url
+    url: archive://functions-mastodons-mastodons-py-S5W2
+  environment:
+    name: python3
+    namespace: ""
+  source:
+    checksum: {}
+status:
+  buildstatus: none
+  lastUpdateTimestamp: "2024-05-23T07:01:26Z"
+
+---
+apiVersion: fission.io/v1
+kind: Function
+metadata:
+  creationTimestamp: null
+  name: tstmtds1
+spec:
+  InvokeStrategy:
+    ExecutionStrategy:
+      ExecutorType: poolmgr
+      MaxScale: 0
+      MinScale: 0
+      SpecializationTimeout: 120
+      TargetCPUPercent: 0
+    StrategyType: execution
+  concurrency: 500
+  environment:
+    name: python3
+    namespace: ""
+  functionTimeout: 60
+  idletimeout: 120
+  package:
+    packageref:
+      name: tstmtds1-3a46eb77-dd88-430b-9529-1a0e23f3e287
+      namespace: ""
+  requestsPerPod: 1
+  resources: {}

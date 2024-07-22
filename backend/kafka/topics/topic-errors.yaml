@@ -1,0 +1,9 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaTopic
+metadata:
+  name: topic-errors
+  labels:
+    strimzi.io/cluster: "mycluster"
+spec:
+  partitions: 1
+  replicas: 1
