@@ -1,0 +1,22 @@
+apiVersion: fission.io/v1
+kind: HTTPTrigger
+metadata:
+  creationTimestamp: null
+  name: tsttw1del
+spec:
+  createingress: false
+  functionref:
+    functionweights: null
+    name: tsttw1
+    type: name
+  host: ""
+  ingressconfig:
+    annotations: null
+    host: '*'
+    path: /tsttw1/{id:[0-9_]+}
+    tls: ""
+  method: ""
+  methods:
+  - DELETE
+  prefix: ""
+  relativeurl: /tsttw1/{id:[0-9_]+}

@@ -1,0 +1,55 @@
+include:
+- ./functions/twitters/twitters.py
+kind: ArchiveUploadSpec
+name: functions-twitters-twitters-py-p42I
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: tsttws4-5d17d719-ed79-4751-96af-ef526c1bbfdf
+spec:
+  deployment:
+    checksum: {}
+    type: url
+    url: archive://functions-twitters-twitters-py-p42I
+  environment:
+    name: python3
+    namespace: ""
+  source:
+    checksum: {}
+status:
+  buildstatus: none
+  lastUpdateTimestamp: "2024-05-25T06:10:09Z"
+
+---
+apiVersion: fission.io/v1
+kind: Function
+metadata:
+  creationTimestamp: null
+  name: tsttws4
+spec:
+  InvokeStrategy:
+    ExecutionStrategy:
+      ExecutorType: poolmgr
+      MaxScale: 0
+      MinScale: 0
+      SpecializationTimeout: 120
+      TargetCPUPercent: 0
+    StrategyType: execution
+  concurrency: 500
+  configmaps:
+  - name: parameters4
+    namespace: ""
+  environment:
+    name: python3
+    namespace: ""
+  functionTimeout: 60
+  idletimeout: 120
+  package:
+    packageref:
+      name: tsttws4-5d17d719-ed79-4751-96af-ef526c1bbfdf
+      namespace: ""
+  requestsPerPod: 1
+  resources: {}

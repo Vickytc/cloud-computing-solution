@@ -1,0 +1,55 @@
+include:
+- ./functions/wipedatabase/wipedatabase.py
+kind: ArchiveUploadSpec
+name: functions-wipedatabase-wipedatabase-py-MPeC
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: tstwipe4-bc346863-b9a3-4c45-8e48-18d4db630e28
+spec:
+  deployment:
+    checksum: {}
+    type: url
+    url: archive://functions-wipedatabase-wipedatabase-py-MPeC
+  environment:
+    name: python4
+    namespace: ""
+  source:
+    checksum: {}
+status:
+  buildstatus: none
+  lastUpdateTimestamp: "2024-05-25T06:10:21Z"
+
+---
+apiVersion: fission.io/v1
+kind: Function
+metadata:
+  creationTimestamp: null
+  name: tstwipe4
+spec:
+  InvokeStrategy:
+    ExecutionStrategy:
+      ExecutorType: poolmgr
+      MaxScale: 0
+      MinScale: 0
+      SpecializationTimeout: 120
+      TargetCPUPercent: 0
+    StrategyType: execution
+  concurrency: 500
+  configmaps:
+  - name: parameters4
+    namespace: ""
+  environment:
+    name: python4
+    namespace: ""
+  functionTimeout: 60
+  idletimeout: 120
+  package:
+    packageref:
+      name: tstwipe4-bc346863-b9a3-4c45-8e48-18d4db630e28
+      namespace: ""
+  requestsPerPod: 1
+  resources: {}
